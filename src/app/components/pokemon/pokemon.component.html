@@ -1,0 +1,44 @@
+<h1><small>Pokedex</small></h1>
+<hr>
+
+<!--<table>
+    <tr *ngFor="let data of pokemons; let i = index">
+        <th>{{data.name}}</th>
+        <th><a href="{{data.url}}">{{data.url}}</a></th>
+    </tr>
+
+</table>-->
+<!--<div class="row">
+
+
+    <div class="col col-md-3" style="padding-bottom: 2%;" *ngFor="let data of pokemons; let i = index">
+        <div class="card">
+            <img [src]="pokemonFoto[i]" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{i+1}} - {{data.name}}</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+
+
+</div>-->
+
+<div class="row">
+
+
+    <div class="col col-md-3" style="padding-bottom: 2%;" *ngFor="let data of prueba; let i = index">
+        <div class="card">
+            <!--<img [src]="artWork" class="card-img-top" alt="...">-->
+            <img src={{data.image}} class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{data.number}} - {{data.name}}</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
