@@ -1,0 +1,85 @@
+.typeTextPosition {
+    margin-top: 10%;
+}
+
+.typeBackgroundStyle {
+    margin-left: 15px;
+    margin-right: 15px;
+    border-top-right-radius: 35%;
+    border-top-left-radius: 35%;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+    height: 40px;
+}
+
+.typeBackgroundBug {
+    background-color: #3C9950;
+}
+
+.typeBackgroundDark {
+    background-color: #595978;
+}
+
+.typeBackgroundDragon {
+    background-color: #62CAD9;
+}
+
+.typeBackgroundElectric {
+    background-color: #FBFA72;
+}
+
+.typeBackgroundFairy {
+    background-color: #EA1368;
+}
+
+.typeBackgroundFighting {
+    background-color: #F06239;
+}
+
+.typeBackgroundFire {
+    background-color: #FD4B5A;
+}
+
+.typeBackgroundFlying {
+    background-color: #94B2C7;
+}
+
+.typeBackgroundGhost {
+    background-color: #906791;
+}
+
+.typeBackgroundGrass {
+    background-color: #27CB50;
+}
+
+.typeBackgroundGround {
+    background-color: #6E491F;
+}
+
+.typeBackgroundIce {
+    background-color: #D8F0FA;
+}
+
+.typeBackgroundNormal {
+    background-color: #CA98A6;
+}
+
+.typeBackgroundPoison {
+    background-color: #9B69DA;
+}
+
+.typeBackgroundPsychic {
+    background-color: #F71D92;
+}
+
+.typeBackgroundRock {
+    background-color: #8B3E22;
+}
+
+.typeBackgroundSteel {
+    background-color: #43BD94;
+}
+
+.typeBackgroundWater {
+    background-color: #85A8FB;
+}

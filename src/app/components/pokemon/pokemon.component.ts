@@ -66,7 +66,13 @@ numero: number = 0;
       pokemonData ={
         number: data.id,
         name: data.name,
-        image: data.sprites.other["official-artwork"].front_default
+        image: data.sprites.other["official-artwork"].front_default,
+        height: data.height,
+        weight: data.weight,
+        slot1: data.types[0].type.name,
+        slot2: data.types[1].type.name,
+
+
       }
   
       //console.log("Datos Pokemon", data)
