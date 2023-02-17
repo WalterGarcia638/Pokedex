@@ -26,11 +26,8 @@
 </div>-->
 
 <div class="row">
-
-
-    <div class="col col-md-3" style="padding-bottom: 2%;" *ngFor="let data of prueba; let i = index">
-        <div class="card">
-            <!--<img [src]="artWork" class="card-img-top" alt="...">-->
+    <div class="col col-md-3 rowPadding" *ngFor="let data of prueba; let i = index">
+        <div class="card" [ngStyle]="{'background-color': data.color}">
             <img src={{data.image}} class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{data.number}} - {{data.name}}</h5>
@@ -156,6 +153,135 @@
             </div>
         </div>
     </div>
+
+
+    <!-- <div class="col col-md-3" style="padding-bottom: 2%;" *ngFor="let data of prueba; let i = index">
+        <div class="card">            
+            <img src={{data.image}} class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{data.number}} - {{data.name}}</h5>
+                <p class="card-text">Height: {{data.height}}</p>
+                <p class="card-text">Weight: {{data.weight}}</p>
+                <div class="row" style="text-align: center;">
+
+                    <div class="col col-md-4 typeBackgroundBug typeBackgroundStyle " *ngIf="data.slot1 == 'bug'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundDark typeBackgroundStyle" *ngIf="data.slot1 == 'dark'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundDragon typeBackgroundStyle" *ngIf="data.slot1 == 'dragon'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundElectric typeBackgroundStyle" *ngIf="data.slot1 == 'electric'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundFairy typeBackgroundStyle" *ngIf="data.slot1 == 'fairy'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundFighting typeBackgroundStyle" *ngIf="data.slot1 == 'fighting'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundFire typeBackgroundStyle" *ngIf="data.slot1 == 'fire'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundFlying typeBackgroundStyle" *ngIf="data.slot1 == 'flying'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundGhost typeBackgroundStyle" *ngIf="data.slot1 == 'ghost'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundGrass typeBackgroundStyle" *ngIf="data.slot1 == 'grass'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundGround typeBackgroundStyle" *ngIf="data.slot1 == 'ground'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundIce typeBackgroundStyle" *ngIf="data.slot1 == 'ice'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundNormal typeBackgroundStyle" *ngIf="data.slot1 == 'normal'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundPoison typeBackgroundStyle" *ngIf="data.slot1 == 'poison'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundPsychic typeBackgroundStyle" *ngIf="data.slot1 == 'psychic'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundRock typeBackgroundStyle" *ngIf="data.slot1 == 'rock'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundSteel typeBackgroundStyle" *ngIf="data.slot1 == 'steel'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundWater typeBackgroundStyle" *ngIf="data.slot1 == 'water'">
+                        <p class="typeTextPosition"><strong>{{data.slot1}}</strong></p>
+                    </div>
+
+
+
+                    <div class="col col-md-4 typeBackgroundBug typeBackgroundStyle " *ngIf="data.slot2 == 'bug'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundDark typeBackgroundStyle" *ngIf="data.slot2 == 'dark'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundDragon typeBackgroundStyle" *ngIf="data.slot2 == 'dragon'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundElectric typeBackgroundStyle" *ngIf="data.slot2 == 'electric'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundFairy typeBackgroundStyle" *ngIf="data.slot2 == 'fairy'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundFighting typeBackgroundStyle" *ngIf="data.slot2 == 'fighting'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundFire typeBackgroundStyle" *ngIf="data.slot2 == 'fire'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundFlying typeBackgroundStyle" *ngIf="data.slot2 == 'flying'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundGhost typeBackgroundStyle" *ngIf="data.slot2 == 'ghost'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundGrass typeBackgroundStyle" *ngIf="data.slot2 == 'grass'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundGround typeBackgroundStyle" *ngIf="data.slot2 == 'ground'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundIce typeBackgroundStyle" *ngIf="data.slot2 == 'ice'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundNormal typeBackgroundStyle" *ngIf="data.slot2 == 'normal'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundPoison typeBackgroundStyle" *ngIf="data.slot2 == 'poison'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundPsychic typeBackgroundStyle" *ngIf="data.slot2 == 'psychic'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundRock typeBackgroundStyle" *ngIf="data.slot2 == 'rock'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundSteel typeBackgroundStyle" *ngIf="data.slot2 == 'steel'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+                    <div class="col col-md-4 typeBackgroundWater typeBackgroundStyle" *ngIf="data.slot2 == 'water'">
+                        <p class="typeTextPosition"><strong>{{data.slot2}}</strong></p>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>-->
 
 
 </div>
