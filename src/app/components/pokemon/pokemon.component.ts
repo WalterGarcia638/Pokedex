@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pokemon } from 'src/app/models/pokemon';
+import { PokemonData } from 'src/app/models/pokemon';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
@@ -18,6 +18,18 @@ i: number = 0;
 prueba: any[] = [];
 
 numero: number = 0;
+
+datosModelo: PokemonData ={
+        number: 0,
+        name: "",
+        image: [],
+        height: 0,
+        weight: 0,
+        slot1: [],
+        slot2: [],
+        color: "",
+      
+};
 
 
 
@@ -44,22 +56,22 @@ numero: number = 0;
     })
   }
 
-  async getPokemonById(){
+   getPokemonById(){
       
   let pokemonData;
 
-  this.pokemonService.getAllPokemon().subscribe((data:any)=>{      
+  /*this.pokemonService.getAllPokemon().subscribe((data:any)=>{      
     this.pokemons.push(...data.results)
     this.numero = this.pokemons.length
     console.log(this.numero)   
-  })
+  })*/
 
 
-  for(let i = 1; i <= 1118; i++){
-    //console.log(this.numero)
+  //for(let i = 1; i <= 1118; i++){
+    for(let i = 1; i <= 100; i++){
     
 
-   await this.pokemonService.getPokemonById(i).subscribe((data:any)=>{
+    this.pokemonService.getPokemonById(i).subscribe((data:any)=>{
       
       let backgroundCardColor;
       switch(data.types[0].type.name){
@@ -120,7 +132,7 @@ numero: number = 0;
 
       }
     
-      pokemonData ={
+     /* pokemonData ={
         number: data.id,
         name: data.name,
         image: data.sprites.other["official-artwork"].front_default,
@@ -129,10 +141,24 @@ numero: number = 0;
         slot1: data.types[0].type.name,
         slot2: data.types[1].type.name,
         color: backgroundCardColor,
+      }*/  
+      
+      this.datosModelo ={
+        number: data.id,
+        name: data.name,
+        image: data.sprites.other["official-artwork"].front_default,
+        height: data.height,
+        weight: data.weight,
+        slot1: data.types[0].type.name,
+        //slot2: data.types[1].type.name,
+        color: backgroundCardColor,
       }
+
+      
   
-      console.table( data)
-      this.prueba.push(pokemonData)
+    console.log(data)
+      this.prueba.push(this.datosModelo)
+      //console.log(this.prueba)
     })
     
     }
